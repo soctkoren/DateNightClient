@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStackNavigator } from 'react-navigation';
+
 import {
   View,
   Text,
@@ -23,13 +23,7 @@ const mapStateToProps = (state: Object) => getWeatherSelector(state);
 
 const mapDispatchToProps = (dispatch: Function) => ({});
 
-connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(DateCreationScreen);
-
-export default createStackNavigator({
-  DateCreation: {
-    screen: DateCreationScreen
-  },
-})
